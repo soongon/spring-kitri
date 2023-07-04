@@ -15,7 +15,7 @@ public class PostRepository {
         return "{" +
                 "  \"postId\": " + id + "," +
                 "  \"title\": \"오늘은 좋은날\"" + "," +
-                "  \"body\": \"스프링은 재밌고 성능이 좋습니다.\"" + "," +
+                "  \"body\": \"스프링은 재밌고 성능이 좋습니다.\"" +
                 "}";
     }
 }
