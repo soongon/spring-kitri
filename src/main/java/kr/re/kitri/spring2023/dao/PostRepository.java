@@ -9,4 +9,13 @@ public class PostRepository {
         return "데이터....";
 
     }
+
+    public String selectPostById(String id) {
+        // select * from post where postId = id;
+        return "{" +
+                "  \"postId\": " + id + "," +
+                "  \"title\": \"오늘은 좋은날\"" + "," +
+                "  \"body\": \"스프링은 재밌고 성능이 좋습니다.\"" + "," +
+                "}";
+    }
 }
