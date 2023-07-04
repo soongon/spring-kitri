@@ -1,5 +1,6 @@
 package kr.re.kitri.spring2023.dao;
 
+import kr.re.kitri.spring2023.model.Post;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -10,12 +11,9 @@ public class PostRepository {
 
     }
 
-    public String selectPostById(String id) {
+    public Post selectPostById(String id) {
         // select * from post where postId = id;
-        return "{" +
-                "  \"postId\": " + id + "," +
-                "  \"title\": \"오늘은 좋은날\"" + "," +
-                "  \"body\": \"스프링은 재밌고 성능이 좋습니다.\"" +
-                "}";
+
+        return new Post(1, "오늘은 좋은날", "스프링 좋아요");
     }
 }
