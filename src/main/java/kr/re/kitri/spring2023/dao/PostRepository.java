@@ -11,6 +11,6 @@ import java.util.List;
 @Mapper
 public interface PostRepository {
     List<Post> selectAllPosts();
-    Post selectPostById(String id);
-    Post insertPost(Post post);
+    Post selectPostById(int id);
+    void insertPost(Post post);
 }

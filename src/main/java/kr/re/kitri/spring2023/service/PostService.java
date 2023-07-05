@@ -16,12 +16,13 @@ public class PostService {
         return postRepository.selectAllPosts();
     }
 
-    public Post getPostById(String id) {
+    public Post getPostById(int id) {
         // 레파지토리야 id 줄계 상세보기 조회해 줘..
         return postRepository.selectPostById(id);
     }
 
     public Post setPost(Post post) {
-        return postRepository.insertPost(post);
+        postRepository.insertPost(post);
+        return post;
     }
 }

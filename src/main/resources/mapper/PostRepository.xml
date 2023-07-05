@@ -9,4 +9,18 @@
                 body
         from    post
     </select>
+    <select id="selectPostById"
+            parameterType="int"
+            resultType="kr.re.kitri.spring2023.model.Post">
+        select  id,
+                title,
+                body
+        from    post
+        where   id = #{id}
+    </select>
+    <insert id="insertPost"
+            parameterType="kr.re.kitri.spring2023.model.Post">
+        insert into post (id, title, body)
+        values (#{id}, #{title}, #{body})
+    </insert>
 </mapper>

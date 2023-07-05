@@ -24,7 +24,7 @@ public class PostController {
     }
 
     @GetMapping("/posts/{id}")
-    public Post viewPostById(@PathVariable String id) {
+    public Post viewPostById(@PathVariable int id) {
         // id 값으로 상세보기를 수행해줘..
         return postService.getPostById(id);
     }
