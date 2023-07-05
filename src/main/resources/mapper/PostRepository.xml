@@ -23,4 +23,15 @@
         insert into post (id, title, body)
         values (#{id}, #{title}, #{body})
     </insert>
+    <update id="updatePost" parameterType="kr.re.kitri.spring2023.model.Post">
+        update  post
+        set     title = #{title},
+                body = #{body}
+        where   id = #{id}
+    </update>
+    <delete id="deletePost" parameterType="int">
+        delete
+        from    post
+        where   id = #{id}
+    </delete>
 </mapper>

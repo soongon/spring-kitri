@@ -25,4 +25,13 @@ public class PostService {
         postRepository.insertPost(post);
         return post;
     }
+
+    public Post modifyPost(Post post) {
+        postRepository.updatePost(post);
+        return post;
+    }
+
+    public void removePost(int id) {
+        postRepository.deletePost(id);
+    }
 }

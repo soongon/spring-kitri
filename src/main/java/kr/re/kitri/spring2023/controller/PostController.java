@@ -13,6 +13,16 @@ public class PostController {
     @Autowired
     private PostService postService;
 
+    @PutMapping("/posts")
+    public Post modifyPost(@RequestBody Post post) {
+        return postService.modifyPost(post);
+    }
+
+    @DeleteMapping("/posts/{id}")
+    public void removePost(@PathVariable int id) {
+        postService.removePost(id);
+    }
+
     @PostMapping("/posts")
     public Post registPost(@RequestBody Post post) {
         return postService.setPost(post);

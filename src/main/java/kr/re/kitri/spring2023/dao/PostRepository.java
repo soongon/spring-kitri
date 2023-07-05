@@ -13,4 +13,6 @@ public interface PostRepository {
     List<Post> selectAllPosts();
     Post selectPostById(int id);
     void insertPost(Post post);
+    void updatePost(Post post);
+    void deletePost(int id);
 }
