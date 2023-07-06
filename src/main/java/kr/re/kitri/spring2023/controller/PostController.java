@@ -37,7 +37,14 @@ public class PostController {
 
     @GetMapping("/posts")
     public List<Post> viewAllPosts() {
-
+        /* 예외 다시 던지기(Exception re-throwing)
+        try {
+            InputStreamReader isr = null;
+            isr.read();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        */
         log.debug("전체보기 요청이 들어왔습니다.");
         return postService.getAllPosts();
     }
