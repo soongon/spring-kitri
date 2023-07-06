@@ -6,6 +6,11 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.file.Path;
 import java.util.List;
 
 @Slf4j
@@ -32,6 +37,7 @@ public class PostController {
 
     @GetMapping("/posts")
     public List<Post> viewAllPosts() {
+
         log.debug("전체보기 요청이 들어왔습니다.");
         return postService.getAllPosts();
     }
