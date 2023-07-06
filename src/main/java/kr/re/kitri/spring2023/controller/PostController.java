@@ -2,11 +2,13 @@ package kr.re.kitri.spring2023.controller;
 
 import kr.re.kitri.spring2023.model.Post;
 import kr.re.kitri.spring2023.service.PostService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Slf4j
 @RestController
 public class PostController {
 
@@ -30,6 +32,7 @@ public class PostController {
 
     @GetMapping("/posts")
     public List<Post> viewAllPosts() {
+        log.debug("전체보기 요청이 들어왔습니다.");
         return postService.getAllPosts();
     }
 

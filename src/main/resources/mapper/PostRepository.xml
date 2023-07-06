@@ -7,7 +7,7 @@
         select  id,
                 title,
                 body
-        from    post
+        from    posts
     </select>
     <select id="selectPostById"
             parameterType="int"
